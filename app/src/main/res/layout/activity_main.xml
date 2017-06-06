@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText1"
+            style="@style/CommonEditText"
+            android:hint="验证是否为空" />
+
+        <EditText
+            android:id="@+id/editText2"
+            style="@style/CommonEditText"
+            android:hint="验证邮箱" />
+
+        <EditText
+            android:id="@+id/editText3"
+            style="@style/CommonEditText"
+            android:hint="验证手机号" />
+
+        <EditText
+            android:id="@+id/editText4"
+            style="@style/CommonEditText"
+            android:hint="验证正则表达式（整数）" />
+
+        <EditText
+            android:id="@+id/editText5"
+            style="@style/CommonEditText"
+            android:hint="验证最大长度（5）" />
+
+        <EditText
+            android:id="@+id/editText6"
+            style="@style/CommonEditText"
+            android:hint="验证最小长度（5）" />
+
+        <EditText
+            android:id="@+id/editText7"
+            style="@style/CommonEditText"
+            android:hint="验证最大值（100）" />
+
+        <EditText
+            android:id="@+id/editText8"
+            style="@style/CommonEditText"
+            android:hint="验证最小值（100）" />
+
+        <EditText
+            android:id="@+id/editText9"
+            style="@style/CommonEditText"
+            android:hint="验证字符串相等（比较和字符串1是否相等）" />
+
+        <EditText
+            android:id="@+id/editText10"
+            style="@style/CommonEditText"
+            android:hint="验证两个edittext内容相等（和上面的EditText的内容比较）" />
+
+        <EditText
+            android:id="@+id/editText11"
+            style="@style/CommonEditText"
+            android:hint="验证唯一性（请输入1）" />
+
+        <EditText
+            android:id="@+id/editText12"
+            style="@style/CommonEditText"
+            android:hint="自定义的验证类型" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/CommonEditText"
+            android:hint="开始验证" />
+    </LinearLayout>
+</ScrollView>
