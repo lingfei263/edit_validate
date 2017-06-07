@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Required {
+public @interface RePassword {
+    String editext();
     String message();
 }

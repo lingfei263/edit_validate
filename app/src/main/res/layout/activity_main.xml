@@ -51,23 +51,15 @@
             style="@style/CommonEditText"
             android:hint="验证最小值（100）" />
 
+
         <EditText
             android:id="@+id/editText9"
             style="@style/CommonEditText"
-            android:hint="验证字符串相等（比较和字符串1是否相等）" />
+            android:hint="验证两个edittext内容相等（和上面的EditText的内容比较）" />
+
 
         <EditText
             android:id="@+id/editText10"
-            style="@style/CommonEditText"
-            android:hint="验证两个edittext内容相等（和上面的EditText的内容比较）" />
-
-        <EditText
-            android:id="@+id/editText11"
-            style="@style/CommonEditText"
-            android:hint="验证唯一性（请输入1）" />
-
-        <EditText
-            android:id="@+id/editText12"
             style="@style/CommonEditText"
             android:hint="自定义的验证类型" />
 

@@ -9,7 +9,6 @@ import java.lang.annotation.Target;
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface EqualsValue {
-    String value();
+public @interface Empty {
     String message();
 }

@@ -12,17 +12,16 @@ import java.util.List;
 import java.util.Map;
 
 import cn.ffb.validate.Email;
-import cn.ffb.validate.EqualsEditText;
-import cn.ffb.validate.EqualsValue;
+import cn.ffb.validate.Empty;
 import cn.ffb.validate.MaxLength;
 import cn.ffb.validate.MaxValue;
 import cn.ffb.validate.MinLength;
 import cn.ffb.validate.MinValue;
 import cn.ffb.validate.Phone;
+import cn.ffb.validate.RePassword;
 import cn.ffb.validate.Regex;
-import cn.ffb.validate.Required;
-import cn.ffb.validate.Unique;
 import cn.ffb.validate.ValidateManager;
+import cn.ffb.validate.validator.IValidator;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 editText.setError(validateMessage);
             }
         });
-        ValidateManager.register(0, new ValidateManager.IValidator() {
+        ValidateManager.register(0, new IValidator() {
             @Override
             public boolean validate(int validateType, EditText editText, String text, Map<String, Object> extras) {
                 return false;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<String> arrays = new ArrayList<>();
 
-    @Required(message = "该项为必填项，不可为空")
+    @Empty(message = "该项为必填项，不可为空")
     private EditText editText1;
     @Email(message = "请输入正确的邮箱")
     private EditText editText2;
@@ -62,13 +61,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText editText7;
     @MinValue(message = "该项的值不可少于100", minValue = 100)
     private EditText editText8;
-    @EqualsValue(value = "1", message = "该项的值和设定的值不相等")
+    @RePassword(editext = "editText8", message = "该项的值和上面的editText的内容不相等")
     private EditText editText9;
-    @EqualsEditText(editext = "editText9", message = "该项的值和上面的editText的内容不相等")
     private EditText editText10;
-    @Unique(array = "arrays", message = "输入的值已经存在，请重新输入")
-    private EditText editText11;
-    private EditText editText12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
         editText8 = (EditText) this.findViewById(R.id.editText8);
         editText9 = (EditText) this.findViewById(R.id.editText9);
         editText10 = (EditText) this.findViewById(R.id.editText10);
-        editText11 = (EditText) this.findViewById(R.id.editText11);
-        editText12 = (EditText) this.findViewById(R.id.editText12);
         Button validateButton = (Button) this.findViewById(R.id.button);
 
         // validateManager.addValidateRequiredItem(editText1, "该项为必填项，不可为空");
@@ -102,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 //        List<String> values = new ArrayList<>();
 //        values.add("1");
         //  validateManager.addValidateUniqueItem(editText11, "输入的值已经存在，请重新输入", values);
-        validateManager.addValidateItem(editText12, 0, "自定义的验证类型");
+        validateManager.addValidateItem(editText10, 0, "自定义的验证类型");
 
         validateButton.setOnClickListener(new View.OnClickListener() {
             @Override
