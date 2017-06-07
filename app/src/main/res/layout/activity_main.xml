@@ -14,7 +14,7 @@
         <EditText
             android:id="@+id/editText1"
             style="@style/CommonEditText"
-            android:hint="验证是否为空" />
+            android:hint="验证是否为空,且最大长度不超过5" />
 
         <EditText
             android:id="@+id/editText2"
@@ -58,10 +58,6 @@
             android:hint="验证两个edittext内容相等（和上面的EditText的内容比较）" />
 
 
-        <EditText
-            android:id="@+id/editText10"
-            style="@style/CommonEditText"
-            android:hint="自定义的验证类型" />
 
         <Button
             android:id="@+id/button"

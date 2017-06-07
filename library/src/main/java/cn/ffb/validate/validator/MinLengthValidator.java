@@ -4,7 +4,7 @@ import android.widget.EditText;
 
 import java.util.Map;
 
-import cn.ffb.validate.ValidateManager;
+import cn.ffb.validate.ValidateItem;
 
 import static cn.ffb.validate.validator.Utils.minLength;
 
@@ -15,7 +15,7 @@ import static cn.ffb.validate.validator.Utils.minLength;
 public class MinLengthValidator implements IValidator{
     @Override
     public boolean validate(int validateType, EditText editText, String text, Map<String, Object> extras) {
-        if (!minLength(text, (int) extras.get(ValidateManager.ValidateItem.EXTRA_LENGTH))) {
+        if (!minLength(text, (int) extras.get(ValidateItem.EXTRA_LENGTH))) {
             return false;
         }
         return true;

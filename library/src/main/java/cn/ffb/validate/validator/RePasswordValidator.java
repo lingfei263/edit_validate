@@ -4,6 +4,7 @@ import android.widget.EditText;
 
 import java.util.Map;
 
+import cn.ffb.validate.ValidateItem;
 import cn.ffb.validate.ValidateManager;
 
 import static cn.ffb.validate.validator.Utils.equalsString;
@@ -16,7 +17,7 @@ public class RePasswordValidator implements IValidator {
     @Override
     public boolean validate(int validateType, EditText editText, String text, Map<String, Object> extras) {
         if (!equalsString(text,
-                ((EditText) extras.get(ValidateManager.ValidateItem.EXTRA_EDITTEXT)).getText().toString())) {
+                ((EditText) extras.get(ValidateItem.EXTRA_EDITTEXT)).getText().toString())) {
             return false;
         }
         return true;

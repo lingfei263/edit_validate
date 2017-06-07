@@ -4,6 +4,7 @@ import android.widget.EditText;
 
 import java.util.Map;
 
+import cn.ffb.validate.ValidateItem;
 import cn.ffb.validate.ValidateManager;
 
 import static cn.ffb.validate.validator.Utils.maxLength;
@@ -15,7 +16,7 @@ import static cn.ffb.validate.validator.Utils.maxLength;
 public class MaxLengthValidator implements IValidator {
     @Override
     public boolean validate(int validateType, EditText editText, String text, Map<String, Object> extras) {
-        if (!maxLength(text, (int) extras.get(ValidateManager.ValidateItem.EXTRA_LENGTH))) {
+        if (!maxLength(text, (int) extras.get(ValidateItem.EXTRA_LENGTH))) {
             return false;
         }
         return true;

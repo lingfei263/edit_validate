@@ -1,4 +1,4 @@
-package cn.ffb.validate;
+package cn.ffb.validate.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MinLength {
-    int minLength();
+public @interface MaxLength {
+    int maxLength();
     String message();
 }

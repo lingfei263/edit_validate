@@ -7,7 +7,7 @@ import java.util.Map;
 import static cn.ffb.validate.validator.Utils.isPhone;
 
 /**
- * Created by Administrator on 2017/6/7.
+ * Created by lingfei on 2017/6/7.
  */
 
 public class PhoneValidator implements IValidator {
